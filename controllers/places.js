@@ -2,10 +2,10 @@ const router = require('express').Router()
 
 
 // GET /places
-router.get('/new', (req, res) => {
-    res.render('places/new')
-  })
-  
+
+
+ 
+
 router.get('/', (req, res) => {
     let places = [{
         name: 'TAI',
@@ -23,6 +23,29 @@ router.get('/', (req, res) => {
       
     res.render('places/index', {places})
   })
- 
+  router.post('/', (req, res) => {
+    console.log(req.body)
+    res.send('POST /places')
+  })
+  
+  router.get('/new', (req, res) => {
+    res.render('places/new')
+  })
+  
+  router.get('/:id', (req, res) => {
+    res.render()
+  })
+  router.put('/:id', (req, res) => {
+    res.render()
+  })
+  router.get('/:id/edit', (req, res) => {
+    res.render()
+  })
+  router.delete('/:id', (req, res) => {
+    res.render()
+  })
+  router.post('/:id/rant', (req, res) => {
+    res.render()
+  })
 
 module.exports = router
