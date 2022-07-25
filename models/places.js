@@ -1,14 +1,13 @@
+const mongoose = require('mongoose')
 
-    module.exports = [{
-        name: 'TAI',
-        city: 'new york',
-        state: 'NY',
-        cuisines: 'tai-restaurent',
-        pic: '/images/5b33c37a1ae6621d008b499c.webp'
-      }, {
-        name: 'Turkish-restaurent',
-        city: 'Phoenix',
-        state: 'AZ',
-        cuisines: 'turkish-restaurent',
-        pic: '/images/13582074_1785449541683516_5400767550309930864_o.jpg'
-      }]
+const placeSchema = new mongoose.Schema({
+  name: { type: String,  },
+  pic: String,
+  pic: {type: String, default: 'https://www.eatthis.com/wp-content/uploads/sites/4/2022/04/epic-burger-cheeseburger.jpg?quality=82&strip=1'},
+  cuisines: { type: String,  },
+  city: { type: String, default: 'Anytown' },
+  state: { type: String, default: 'USA' },
+  founded: Number
+})
+module.exports = mongoose.model('Place', placeSchema)
+
