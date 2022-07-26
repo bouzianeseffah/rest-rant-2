@@ -5,7 +5,7 @@ db.Place.create([{
     city: 'Seattle',
     state: 'WA',
     cuisines: 'Thai, Pan-Asian',
-    pic: 'https://www.frogpondvillage.com/wp-content/uploads/2019/06/155.jpg',
+    pic: 'https://www.galwaytourism.ie/wp-content/uploads/2019/05/top-5-restaurants-1024x768.jpg',
     founded: 1989
 }, {
     name: 'Coding Cat Cafe',
